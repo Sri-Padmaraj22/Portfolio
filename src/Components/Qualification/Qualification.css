@@ -1,0 +1,125 @@
+.qualification-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 200px 170px;
+    padding-bottom: 100px;
+}
+
+.qualification_title{
+    position: relative;
+}
+.qualification_title h2{
+    font-size: 80px;
+    font-weight: 600;
+    padding: 0px 30px;
+}
+.qualification_title img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+/* Timeline container */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* The vertical line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  background: linear-gradient(270deg, #DA7C25 0.36%, #B923E1 102.06%);
+  transform: translateX(-50%);
+}
+
+/* Timeline item */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 15px 25px;
+  box-sizing: border-box;
+}
+
+/* Dots */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 18px;
+  height: 18px;
+  background: linear-gradient(270deg, #DA7C25 0.36%, #B923E1 102.06%);
+  border: 3px solid #fff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Left side */
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+.timeline-item.left::before {
+  right: -9px;
+}
+
+/* Right side */
+.timeline-item.right {
+  left: 50%;
+}
+.timeline-item.right::before {
+  left: -9px;
+}
+
+/* Content box */
+.timeline-content {
+  background: linear-gradient(270deg, #DA7C25 0.36%, #B923E1 102.06%);
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+  display: inline-block;
+  max-width: 350px;
+  transition: 0.3s;
+}
+
+.timeline-content:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px pink;
+}
+
+.timeline-content h3 {
+  margin: 0 0 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.timeline-content p {
+  margin: 2px 0;
+  font-size: 14px;
+}
+@media(max-width:768px)
+{
+    .qualification-container{
+        margin: 50px 70px;
+        align-items: start;
+        gap: 80px
+        ;
+    }
+    .qualification_title h2{
+        font-size: 50px;
+        padding: 0;
+    }
+    .about-title img{
+        width: 130px;
+        right: -20px;
+    }
+  }
